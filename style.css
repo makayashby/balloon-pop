@@ -1,5 +1,58 @@
+:root{
+  --primary: #f393fd;
+  --primary-darken: rgb(175 47 189);
+  --bg: rgb(211, 208, 208);
+  --shadow: 2px 0 8px rgba(0,0,0,3);
+  --corners: 4px;
+  --text-color:rgb(32, 30, 30);
+  --light: rgb(255, 250, 250);
+  --dark:rgb(32, 30, 30);
+  --dark-lighten:rgb(90, 83, 83);
+}
+
+
 body{
-    background-color: wheat;
+    background-color: var(--bg);
+    font-family: 'Permanent Marker', cursive;
+    font-size: 16pt;
+    color: var(--text-color);
+}
+
+header{
+    margin: 3em 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+form{
+    margin: 0;
+}
+
+input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    outline: none;
+    font-size: 15pt;
+}
+
+button{
+    background-color: var(--primary);
+    color: var(--light);
+    border: 1px solid var(--primary-darken);
+    border-radius: var(--corners);
+    box-shadow: var(--shadow);
+    text-transform: uppercase;
+    transition: all .2s ease;
+    cursor: pointer;
+    padding: 1em;
+}
+
+button:hover{
+    background-color: var(--primary-darken);
 }
 
 .balloon{
@@ -7,4 +60,69 @@ body{
     width: 100px;
     background-color: blue;
     border-radius: 50%;
+    transition: all .2s ease;
+}
+
+.container{
+    width: 50%;
+    margin: auto;
+}
+
+.card{
+    background-color: var(--light);
+    padding: 1em;
+    box-shadow: var(--shadow);
+    border-radius: var(--corners);
+}
+
+.shadow{
+    filter: drop-shadow(var(--shadow));
+}
+
+.bg-dark{
+    background-color: var(--dark);
+}
+.btn-dark{
+    background-color: var(--dark-lighten);
+    border-color: var(--dark);
+}
+.btn-dark:hover{
+    background-color: var(--dark);
+    border-color: var(--dark-lighten);
+}
+.text-light{
+    color: var(--light);
+}
+.d-flex{
+    display: flex;
+    align-items: center;
+}
+.d-flex.space-between{
+    justify-content: space-between;
+}
+.d-flex.space-around{
+    justify-content: space-around;
+}
+
+.mt1{
+    margin-top: .5em;
+}
+.mt2{
+    margin-top: 1em;
+}
+.mt3{
+    margin-top: 1.5em;
+}
+.mb1{
+    margin-bottom: .5em;
+}
+.mb2{
+    margin-bottom: 1em;
+}
+.mb3{
+    margin-bottom: 1.5em;
+}
+
+.hidden{
+   display: none !important; 
 }
